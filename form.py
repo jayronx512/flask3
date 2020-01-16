@@ -8,7 +8,7 @@ def index():
 
 @app.route("/contact")
 def contact():
-    return render_template('_contact.html')
+    return render_template('_contact.html', methods = ["POST"])
 
 if __name__ == '__main__':
     app.run()
