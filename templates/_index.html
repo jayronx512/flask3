@@ -1,8 +1,12 @@
 {% extends "_main.html" %}
 {% block content %}
 {% if first_name %}
-  <p>Thanks for contacting us, {{first_name}}</p>
-{% endif %}
-<h1>Homepage content here</h1>
-<a href="{{ url_for('contact') }}" class="btn">Contact Us</a>
+  <p style="font-size: 20px;">Thanks {{first_name}}!</p>
+
+  <a href="{{ url_for('contact') }}" class="btn">Submit another feedback</a>
+ 
+{%else%}
+<h1 style = "color: darkslategray">Have you tasted our latest chocolate product? If yes, please proceed to fill up the feedback!</h1>
+<a href="{{ url_for('contact') }}" class="btn">Give feedback</a>
+{%endif%}
 {% endblock %}
