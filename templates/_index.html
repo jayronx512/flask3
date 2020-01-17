@@ -1,7 +1,7 @@
 {% extends "_main.html" %}
 {% block content %}
 {% if first_name %}
-  <p style="font-size: 20px;">Thanks {{first_name}}!</p>
+  <p style="font-size: 20px;">Thanks {{first_name}} {{last_name}}!</p>
 
   <a href="{{ url_for('contact') }}" class="btn">Submit another feedback</a>
  
